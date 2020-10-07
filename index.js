@@ -140,7 +140,11 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, string){
-    array.splice(string);
+    for(let i = 0; array.length; i++){
+        if (array[i] === string){
+            array.splice(i, 1);
+        }
+    }
     return array;
 }
 
